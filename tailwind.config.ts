@@ -15,10 +15,12 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       spacing: {
+        '11': '2.75em',
+        '18': '4.75em',
         '21': '5.25em',
-        '27': '6.75rem',
-        '33': '8.25em',
-        '75': '18.75em',
+        '23': '5.625em',
+        '30': '7.375em',
+        '67': '16.75em',
       },
       fontSize: {
         'xxs': '0.625rem',
