@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { KeyboardKey } from 'src/presentation/KeyboardKey';
+import { KeyboardKey, TextPosition } from 'src/presentation/KeyboardKey';
+import { row3, row4, row5, row6 } from 'src/presentation/rows';
 
 const meta: Meta<typeof KeyboardKey> = {
   component: KeyboardKey,
@@ -8,63 +9,53 @@ const meta: Meta<typeof KeyboardKey> = {
 export default meta;
 type Story = StoryObj<typeof KeyboardKey>;
 
+const KEY_A = row4.find(row => row.code === 'KeyA');
+const KEY_RIGHT = row6.find(row => row.code === 'ArrowRight');
+const KEY_META = row6.find(row => row.code === 'MetaLeft');
+const KEY_TAB = row3.find(row => row.code === 'Tab');
+const KEY_ENTER = row4.find(row => row.code === 'Enter');
+const KEY_SHIFT = row5.find(row => row.code === 'ShiftRight');
+const KEY_SPACE = row6.find(row => row.code === 'Space');
+
 export const Primary: Story = {
   args: {
-    primaryChar: 'A',
-    isShiftPressed: false,
-    isKeyPressed: false,
-    keySize: 'primary',
+    ...KEY_A, 
+    textPosition: KEY_A?.textPosition as TextPosition,
   },
 };
 export const Small: Story = {
   args: {
-    primaryChar: '▶',
-    isShiftPressed: false,
-    isKeyPressed: false,
-    keySize: 'small',
+    ...KEY_RIGHT, 
+    textPosition: KEY_RIGHT?.textPosition as TextPosition,
   },
 };
 export const Large: Story = {
   args: {
-    primaryChar: 'command',
-    isShiftPressed: false,
-    isKeyPressed: false,
-    keySize: 'command',
-    textPosition: 'left',
+    ...KEY_META, 
+    textPosition: KEY_META?.textPosition as TextPosition,
   },
 };
 export const Tab: Story = {
   args: {
-    primaryChar: 'tab',
-    isShiftPressed: false,
-    isKeyPressed: false,
-    keySize: 'tab',
-    textPosition: 'left',
+    ...KEY_TAB, 
+    textPosition: KEY_TAB?.textPosition as TextPosition,
   },
 };
 export const Return: Story = {
   args: {
-    primaryChar: 'return',
-    isShiftPressed: false,
-    isKeyPressed: false,
-    keySize: 'return',
-    textPosition: 'left',
+    ...KEY_ENTER, 
+    textPosition: KEY_ENTER?.textPosition as TextPosition,
   },
 };
 export const Shift: Story = {
   args: {
-    primaryChar: 'shift',
-    isShiftPressed: false,
-    isKeyPressed: false,
-    keySize: 'shift',
-    textPosition: 'left',
+    ...KEY_SHIFT, 
+    textPosition: KEY_SHIFT?.textPosition as TextPosition,
   },
 };
 export const Space: Story = {
   args: {
-    primaryChar: '',
-    isShiftPressed: false,
-    isKeyPressed: false,
-    keySize: 'space',
+    ...KEY_SPACE, 
+    textPosition: KEY_SPACE?.textPosition as TextPosition,
   },
 };
