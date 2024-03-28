@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Keyboard } from 'src/presentation/Keyboard';
-import { row1, row2, row3, row4, row5, row6 } from 'src/presentation/rows';
+import { KeyboardTemplate } from 'src/presentation/Keyboard.template';
+import { row1, row2, row3, row4, row5, row6 } from 'src/rows';
 
-const meta: Meta<typeof Keyboard> = {
-  component: Keyboard,
+const meta: Meta<typeof KeyboardTemplate> = {
+  component: KeyboardTemplate,
 };
 
 export default meta;
-type Story = StoryObj<typeof Keyboard>;
+type Story = StoryObj<typeof KeyboardTemplate>;
 
 export const Primary: Story = {
   args: {
