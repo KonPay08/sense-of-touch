@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { KeyboardRow } from 'src/presentation/KeyboardRow';
-import { row2, row3 } from 'src/presentation/rows';
+import { row2, row3 } from 'src/rows';
 
 const meta: Meta<typeof KeyboardRow> = {
   component: KeyboardRow,

@@ -1,15 +1,9 @@
+import { KeyboardKeys } from "src/app/Keyboard";
 import { ArrowKeys } from "src/presentation/ArrowKeys";
 import { KeyAttributes } from "src/presentation/KeyboardKey"
 import { KeyboardRow } from "src/presentation/KeyboardRow"
 
-type KeyboardProps = {
-  row1: KeyAttributes[],
-  row2: KeyAttributes[],
-  row3: KeyAttributes[],
-  row4: KeyAttributes[],
-  row5: KeyAttributes[],
-  row6: KeyAttributes[],
-}
+export type KeyboardProps = KeyboardKeys;
 
 const fallbackKey: KeyAttributes = {
   code: '',
@@ -24,7 +18,7 @@ const fallbackKey: KeyAttributes = {
   isShiftPressed: false,
 }
 
-export const Keyboard: React.FC<KeyboardProps> = (props) => {
+export const KeyboardTemplate: React.FC<KeyboardProps> = (props) => {
   const arrowKeys = {
     left: props.row6.find(key => key.primaryChar === '◀︎') || fallbackKey,
     up: props.row6.find(key => key.primaryChar === '▲') || fallbackKey,
