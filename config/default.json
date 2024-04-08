@@ -1,0 +1,4 @@
+{
+  "ENV_NAME": "development",
+  "CLIENT_URL": "http://localhost:3001"
+}
