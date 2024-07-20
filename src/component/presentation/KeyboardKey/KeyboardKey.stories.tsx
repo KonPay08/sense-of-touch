@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { KeyboardKey, TextPosition } from 'src/presentation/KeyboardKey';
-import { row3, row4, row5, row6 } from 'src/rows';
+import { KeyboardKey } from 'src/component/presentation/KeyboardKey';
+import { row3, row4, row5, row6 } from 'src/const/rows';
+import { TextPosition } from 'src/types/key';
 
 const meta: Meta<typeof KeyboardKey> = {
   component: KeyboardKey,

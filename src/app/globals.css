@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .key {
+    --bg-color: transparent;
+    --scale: 1;
+    @apply inline-flex relative m-1 p-1 border border-gray-300 rounded shadow text-center select-none transition-all duration-75;
+    background-color: var(--bg-color);
+    transform: scale(var(--scale));
+  }
+  .key-pressed {
+    --bg-color: #e5e7eb;
+    --scale: 0.95;
+  }
+}

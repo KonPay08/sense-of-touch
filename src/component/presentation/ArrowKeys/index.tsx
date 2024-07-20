@@ -1,4 +1,5 @@
-import { KeyAttributes, KeyboardKey } from "src/presentation/KeyboardKey";
+import { MemoizedKeyboardKey } from "src/component/presentation/KeyboardKey";
+import { KeyAttributes } from "src/types/key";
 
 type ArrowKeysProps = {
   left: KeyAttributes,
@@ -10,12 +11,12 @@ type ArrowKeysProps = {
 export const ArrowKeys: React.FC<ArrowKeysProps> = ({ left, up, down, right }) => {
   return (
     <div className="flex justify-center items-center">
-      <KeyboardKey {...left} />
+      <MemoizedKeyboardKey {...left} />
       <div className="flex flex-col">
-        <KeyboardKey {...up} />
-        <KeyboardKey {...down} />
+        <MemoizedKeyboardKey {...up} />
+        <MemoizedKeyboardKey {...down} />
       </div>
-      <KeyboardKey {...right} />
+      <MemoizedKeyboardKey {...right} />
     </div>
   );
 };

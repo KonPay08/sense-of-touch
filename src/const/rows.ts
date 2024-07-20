@@ -1,4 +1,5 @@
-import { KeyAttributes } from "src/presentation/KeyboardKey"
+import { KeyAttributes } from "src/types/key";
+
 
 export const row1: KeyAttributes[] = [
   {

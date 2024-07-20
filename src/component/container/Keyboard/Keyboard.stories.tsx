@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { KeyboardTemplate } from 'src/presentation/Keyboard.template';
-import { row1, row2, row3, row4, row5, row6 } from 'src/rows';
+import { KeyboardTemplate } from 'src/component/container/Keyboard/Keyboard.template';
+import { row1, row2, row3, row4, row5, row6 } from 'src/const/rows';
 
 const meta: Meta<typeof KeyboardTemplate> = {
   component: KeyboardTemplate,

@@ -1,4 +1,4 @@
-import { row1, row2, row3, row4, row5, row6 } from "src/rows";
+import { row1, row2, row3, row4, row5, row6 } from "src/const/rows";
 
 // このテストはアプリがキーボードイベントに正しく反応することを保証する
 describe('Keyboard component key event tests', () => {

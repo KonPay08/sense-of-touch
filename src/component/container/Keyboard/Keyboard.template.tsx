@@ -1,7 +1,6 @@
-import { KeyboardKeys } from "src/app/Keyboard";
-import { ArrowKeys } from "src/presentation/ArrowKeys";
-import { KeyAttributes } from "src/presentation/KeyboardKey"
-import { KeyboardRow } from "src/presentation/KeyboardRow"
+import { ArrowKeys } from "src/component/presentation/ArrowKeys";
+import { MemoizedKeyboardKey } from "src/component/presentation/KeyboardKey";
+import { KeyAttributes, KeyboardKeys } from 'src/types/key';
 
 export type KeyboardProps = KeyboardKeys;
 
@@ -37,6 +36,23 @@ export const KeyboardTemplate: React.FC<KeyboardProps> = (props) => {
         <KeyboardRow keys={row6WithoutArrows} />
         {arrowKeys.left && <ArrowKeys {...arrowKeys} />}
       </div>
+    </div>
+  )
+}
+
+type KeyboardRowProps = {
+  keys: KeyAttributes[],
+}
+
+const KeyboardRow: React.FC<KeyboardRowProps> = (props) => {
+  return (
+    <div className="flex">
+      {props.keys.map((data) => (
+        <MemoizedKeyboardKey
+          key={data.code}
+          {...data}
+        />
+      ))}
     </div>
   )
 }

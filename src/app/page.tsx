@@ -1,4 +1,4 @@
-import { Keyboard } from "src/app/Keyboard";
+import { Keyboard } from "src/component/container/Keyboard";
 
 export default function Home() {
   return <Keyboard />;

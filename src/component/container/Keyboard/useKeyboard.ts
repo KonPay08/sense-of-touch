@@ -1,20 +1,8 @@
-'use client'
+import { useEffect, useState } from 'react';
+import { row1, row2, row3, row4, row5, row6 } from 'src/const/rows';
+import { KeyboardKeys } from 'src/types/key';
 
-import { useEffect, useState } from "react";
-import { KeyboardTemplate } from "src/presentation/Keyboard.template";
-import { KeyAttributes } from "src/presentation/KeyboardKey";
-import { row1, row2, row3, row4, row5, row6 } from "src/rows";
-
-export type KeyboardKeys = {
-  row1: KeyAttributes[],
-  row2: KeyAttributes[],
-  row3: KeyAttributes[],
-  row4: KeyAttributes[],
-  row5: KeyAttributes[],
-  row6: KeyAttributes[],
-}
-
-export const Keyboard = () => {
+export const useKeyboard = () => {
   const [keyboardKeys, setKeyboardKeys] = useState<KeyboardKeys>({
     row1,
     row2,
@@ -65,5 +53,5 @@ export const Keyboard = () => {
     };
   }, []);
 
-  return <KeyboardTemplate {...keyboardKeys}/>;
-}
+  return keyboardKeys;
+};
